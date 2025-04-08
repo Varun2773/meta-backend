@@ -17,7 +17,8 @@ const CALLBACK_URL = "https://meta-backend-kp8u.onrender.com/auth/facebook/callb
 const CLIENT_URL = "http://localhost:5173";
 
 app.get("/auth/facebook", (req, res) => {
-  const url = `https://www.facebook.com/v22.0/dialog/oauth?client_id=${FACEBOOK_CLIENT_ID}&redirect_uri=${CALLBACK_URL}&scopes=email,public_profile`;
+  const url = `https://www.facebook.com/v22.0/dialog/oauth?client_id=${FACEBOOK_CLIENT_ID}&redirect_uri=${CALLBACK_URL}&scope=email,public_profile`;
+
   res.redirect(url);
 });
 
