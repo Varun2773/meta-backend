@@ -13,11 +13,16 @@ app.use(cookiesParser());
 
 const FACEBOOK_CLIENT_ID = 1272868310644432;
 const FACEBOOK_CLIENT_SECRET = "676b03cf8fe59848cc1c4a1cd26db249";
-const CALLBACK_URL = "https://meta-backend-kp8u.onrender.com/auth/facebook/callback";
+const CALLBACK_URL =
+  "https://meta-backend-kp8u.onrender.com/auth/facebook/callback";
 const CLIENT_URL = "http://localhost:5173";
 
 app.get("/auth/facebook", (req, res) => {
-  const url = `https://www.facebook.com/v22.0/dialog/oauth?client_id=${FACEBOOK_CLIENT_ID}&redirect_uri=${CALLBACK_URL}&scope=email,public_profile`;
+  const url = `https://www.facebook.com/v22.0/dialog/oauth?
+  client_id=${FACEBOOK_CLIENT_ID}
+  &redirect_uri=${CALLBACK_URL}
+  &scope=whatsapp_business_management,business_management,pages_show_list
+`;
 
   res.redirect(url);
 });
