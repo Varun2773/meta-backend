@@ -18,11 +18,7 @@ const CALLBACK_URL =
 const CLIENT_URL = "http://localhost:5173";
 
 app.get("/auth/facebook", (req, res) => {
-  const url = `https://www.facebook.com/v22.0/dialog/oauth?
-  client_id=${FACEBOOK_CLIENT_ID}
-  &redirect_uri=${CALLBACK_URL}
-  &scope=whatsapp_business_management,business_management,pages_show_list
-`;
+  const url = `https://www.facebook.com/v19.0/dialog/oauth?client_id=1272868310644432&redirect_uri=https%3A%2F%2Fmeta-backend-kp8u.onrender.com%2Fauth%2Ffacebook%2Fcallback&scope=whatsapp_business_management%2Cbusiness_management%2Cpages_show_list`;
 
   res.redirect(url);
 });
